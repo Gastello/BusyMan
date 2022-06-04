@@ -1,0 +1,43 @@
+:root {
+--background-color: #ffe4ee;
+--font-color: #623e5a; 
+--index-font-color: #623e5a;
+/*! //buttons, headers of blocks, sider, users:hover, */ 
+--darker: #ffb6d2; 
+/*! //footer, header, today's day (calendar), login/register/create/change forms background */
+--color-4: #e09fb8; 
+--button-color:  #ffb6d2;
+--hover: #ffb6d2d0; 
+--active: #ffb6d297; 
+--burger-background: #e09fb8; 
+--burger-color: #ffffff; 
+--menu-font: #ffffff; 
+--buttons-font: #ffffff; 
+--input-background: #ffffff; 
+--checkbox-text: #ffffff; 
+--sider-border: #ffffff; 
+--form-header-font: #ffffff; 
+--form-link-font: #ffffff; 
+--form-input-header: #623e5a; 
+--form-header-background: #ffb6d2;
+--note-clips: #c4c4c4; 
+--note-background: #ffffff; 
+--note-font: #623e5a;  
+--aboutus-background: #ffffff; 
+--aboutus-font: #623E5A;
+--icon-background: #ffffff; 
+--users-background: #ffffff; 
+--users-hoverfont: #ffffff; 
+--users-font: #623e5a;
+--statistic-background: #ffffff; 
+--datatitle-background: #623e5a; 
+--task-font: #623e5a;
+--ico-color: #623e5a;
+--ico-footer: #623e5a;
+--calendar-button-primary: #ffffff;
+--calendar-button-primary-hover: #ffffff;
+--calendar-border-color: #ffffff;
+--calendar-event-background: #623e5a;
+--calendar-button-font-active:#623e5a;
+--calendar-background: #ffb6d2;
+}

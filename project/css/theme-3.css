@@ -1,0 +1,43 @@
+:root {
+--background-color: #eeeeee;
+--font-color: #000000; 
+--index-font-color: #000000;
+/*! //buttons, headers of blocks, sider, users:hover, */ 
+--darker: #323232; 
+/*! //footer, header, today's day (calendar), login/register/create/change forms background */
+--color-4: #1c1c1c; 
+--button-color:  #323232;
+--hover: #2d2d2d; 
+--active: #232323; 
+--burger-background: rgb(93, 93, 93);
+--burger-color: #ffffff; 
+--menu-font: #ffffff; 
+--buttons-font: #ffffff; 
+--input-background: #dadada; 
+--checkbox-text: #ffffff; 
+--sider-border: #ffffff; 
+--form-header-font: #ffffff; 
+--form-link-font: #ffffff; 
+--form-input-header: #ffffff;
+--form-header-background: #1c1c1c; 
+--note-clips: #c4c4c4; 
+--note-background: #ffffff; 
+--note-font: rgb(0, 0, 0);
+--aboutus-background: #ffffff; 
+--aboutus-font: rgb(0, 0, 0);
+--icon-background: #ffffff; 
+--users-background: #ffffff; 
+--users-hoverfont: #ffffff; 
+--users-font: rgb(0, 0, 0);
+--statistic-background: #ffffff; 
+--datatitle-background: #545454; 
+--task-font: rgb(0, 0, 0);
+--ico-color: rgb(0, 0, 0);
+--ico-footer: rgb(255, 255, 255);
+--calendar-button-primary: #000000;
+--calendar-button-primary-hover: rgb(64, 64, 64);
+--calendar-border-color: #000000;
+--calendar-event-background: rgb(71, 71, 71);
+--calendar-button-font-active:#ffffff;
+--calendar-background: #9e9e9e;
+}

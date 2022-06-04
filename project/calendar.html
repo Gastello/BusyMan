@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BusyMan - Calendar</title>
+
+
+   <script
+      src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+   <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.2/main.min.js'></script>
+   <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.4.2/main.min.js'></script>
+   <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
+   <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
+
+   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.2/main.min.css'>
+   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.4.2/main.min.css'>
+   <link id="theme" rel="stylesheet" href="../project/css/theme-1.css">
+   <link rel="stylesheet" href="../project/css/style.css">
+</head>
+
+<body class="calendar__body">
+   <div class="wrapper">
+      <header class="header">
+         <div class="container">
+            <div class="header__body">
+               <a href="main.html" class="header__logo">Busy Man</a>
+               <nav class="header__menu">
+                  <ul class="header__list">
+                     <li><a href="main.html" class="header__link">Home</a></li>
+                     <li><a href="about-us.html" class="header__link">About us</a></li>
+                     <li><a href="index.html" class="header__link">Log out</a></li>
+                  </ul>
+               </nav>
+               <div class="header__burger">
+                  <span></span>
+               </div>
+            </div>
+         </div>
+      </header>
+      <main class="page">
+         <div class="sider">
+            <ul class="sider__list">
+               <li><a class="sider__link" href="simple.html">Simple List</a></li>
+               <li><a class="sider__link" href="project.html">Projects</a></li>
+               <li class="sider__active"><a class="sider__link" href="calendar.html">Calendar</a></li>
+               <li><a class="sider__link" href="someday.html">SOmeday-Maybe List</a></li>
+               <li><a class="sider__link" href="notes.html">NOtes</a></li>
+               <li><a class="sider__link" href="waiting-for.html">Waiting-For List</a></li>
+               <li><a class="sider__link" href="users.html">Users</a></li>
+               <li>
+                  <div class="theme sider__link">
+                     Change Theme
+                  </div>
+               </li>
+               <li>
+                  <div class="sider__link">
+                     Change Language
+                  </div>
+               </li>
+            </ul>
+            <div class="sider__element"></div>
+         </div>
+         <div class="container container__calendar">
+            <div class="calendar__wrapper">
+               <div id='calendar'></div>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="container container_footer">
+            <div class="footer__social-wrapper">
+               <div class="footer__social">
+                  <div class="footer__facebook"><a href="#" class="icon-facebook"></a></div>
+                  <div class=" footer__inst"><a href="#" class="icon-inst"> </a> </div>
+                  <div class="footer__youtube"><a href="#" class="icon-youtube"></a></div>
+                  <div class="footer__viber"><a href="#" class="icon-viber"></a></div>
+                  <div class="footer__telegram"><a href="#" class="icon-telega"></a></div>
+               </div>
+            </div>
+            <div class="footer__corp">
+               "Busy Man", 2022. All rights reserved. CREATED BY MAMCHUR AND TYMCHENKO
+            </div>
+         </div>
+      </footer>
+   </div>
+   <script src="./js/theme.js"></script>
+   <script src="./js/burger.js"></script>
+   <script src="./js/sider.js"></script>
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         var calendarEl = document.getElementById('calendar');
+
+         var calendar = new FullCalendar.Calendar(calendarEl, {
+            plugins: ['dayGrid'],
+            defaultDate: '2022-04-09',
+            header: {
+               left: 'prev,next today',
+               center: 'title',
+               right: 'dayGridMonth,dayGridWeek,dayGridDay'
+            },
+            selectable: true,
+            eventLimit: true,
+            eventRender: function (info) {
+               var tooltip = new Tooltip(info.el, {
+                  title: info.event.extendedProps.description,
+                  placement: 'top',
+                  trigger: 'hover',
+                  container: 'body'
+               });
+
+            },
+
+            events: [
+               {
+                  title: 'Похід в гори',
+                  description: 'Ми з групої зібрались поїхати в гори на вихідні',
+                  start: '2022-04-01'
+               },
+               {
+                  title: 'Вихідні',
+                  description: 'Я взяв відпустку і тепер можу відпочити!',
+                  start: '2022-04-07',
+                  end: '2022-04-10'
+               },
+               {
+                  groupId: '999',
+                  title: 'Репертиція',
+                  description: 'В цей день ми тренеруємось презентувати наш проект',
+                  start: '2022-04-09T16:00:00'
+               },
+               {
+                  groupId: '999',
+                  title: 'Пробіжка',
+                  description: 'Спорт - це життя, тому потрібно пробігтись =)',
+                  start: '2022-04-16T16:00:00'
+               },
+               {
+                  title: 'Конференція',
+                  description: 'В цей день я відвідаю мастер клас по верстці',
+                  start: '2022-04-11',
+                  end: '2022-04-13'
+               },
+               {
+                  title: 'Зустріч',
+                  description: 'Я і Бодя зустрінемось для обговорення проекту',
+                  start: '2022-04-12T10:30:00',
+                  end: '2022-04-12T12:30:00'
+               },
+               {
+                  title: 'Тести',
+                  description: 'Тестую баги в проекті',
+                  start: '2022-04-12T12:00:00'
+               },
+               {
+                  title: 'Пара з Математики',
+                  description: 'Не забути повторити пройдений матеріал!',
+                  start: '2022-04-12T14:30:00'
+               },
+               {
+                  title: 'День народження',
+                  description: 'Сьогодні День народження у Марка!',
+                  start: '2022-04-13T07:00:00'
+               },
+               {
+                  title: 'Прочитати книгу',
+                  description: 'Я купив книгу Відьмак і ні разу не брав її у руки =(',
+                  start: '2022-04-28'
+               }
+            ]
+         });
+
+         calendar.render();
+      });
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BusyMan - Waiting For List</title>
+   <link id="theme" rel="stylesheet" href="../project/css/theme-1.css">
+   <link rel="stylesheet" href="../project/css/style.css">
+</head>
+
+<body class="calendar__body">
+   <div class="wrapper">
+      <header class="header">
+         <div class="container">
+            <div class="header__body">
+               <a href="main.html" class="header__logo">Busy Man</a>
+               <nav class="header__menu">
+                  <ul class="header__list">
+                     <li><a href="main.html" class="header__link">Home</a></li>
+                     <li><a href="about-us.html" class="header__link">About us</a></li>
+                     <li><a href="index.html" class="header__link">Log out</a></li>
+                  </ul>
+               </nav>
+               <div class="header__burger">
+                  <span></span>
+               </div>
+            </div>
+         </div>
+      </header>
+      <main class="page">
+         <div class="creator__wrapper">
+
+            <form action="${path}/task/add" method="post" class="creator" id="submitTaskForm">
+               <div class="creator__header">
+                  Creating a new task:
+                  <span class="creator__close"></span>
+               </div>
+               <div class="creator__body">
+                  <div class="creator__text">Name:</div>
+                  <div class="creator__input input">
+                     <input name="title" type="text" placeholder="TASK NAME">
+                  </div>
+                  <div class="creator__text">Description:</div>
+                  <div class="creator__textarea">
+                     <textarea name="description" type="text" placeholder="ENTER DESCRIPTION"></textarea>
+                  </div>
+                  <div class="creator__button_wrapper"><button class="creator__button button">Create</button></div>
+               </div>
+            </form>
+         </div>
+         <div class="sider">
+            <ul class="sider__list">
+               <li><a class="sider__link" href="simple.html">Simple List</a></li>
+               <li><a class="sider__link" href="project.html">Projects</a></li>
+               <li><a class="sider__link" href="calendar.html">Calendar</a></li>
+               <li class="sider__active"><a class="sider__link" href="someday.html">SOmeday-Maybe List</a></li>
+               <li><a class="sider__link" href="notes.html">NOtes</a></li>
+               <li><a class="sider__link" href="waiting-for.html">Waiting-For List</a></li>
+               <li><a class="sider__link" href="users.html">Users</a></li>
+               <li>
+                  <div class="theme sider__link">
+                     Change Theme
+                  </div>
+               </li>
+               <li>
+                  <div class="sider__link">
+                     Change Language
+                  </div>
+               </li>
+            </ul>
+            <div class="sider__element"></div>
+         </div>
+         <div class="container">
+
+            <div class="tasks tasks_waiting">
+               <div class="tasks__header">
+                  Your SOMEDAY-MAYBE LIST:
+               </div>
+               <form action="#" method="multipart/form-data" class="waiting__elements elements">
+                  <div class="waiting__element element"
+                     data-title="Квартира потребує ремонту, цікаво в скільки він обійдеться.." aria-haspopup="true">
+                     <label class="element__checkbox checkbox-2">
+                        <input class="checkbox" type="checkbox">
+                        <span></span>
+                     </label>
+                     <div class="element__info">
+                        <div class="element__task-name">
+                           Зробити ремонт в квартирі
+                        </div>
+                     </div>
+                     <div class="element__settings">
+                        <div class="element__gear">
+                           <a href="form.html" class="icon-settings"></a>
+                        </div>
+                        <div class="element__delete">
+                           <a href="" class="icon-delete"></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="waiting__element element"
+                     data-title="Як на першу машину, то я хотів би купити собі Гольф 3 або 4" aria-haspopup="true">
+                     <label class="element__checkbox checkbox-2">
+                        <input class="checkbox" type="checkbox">
+                        <span></span>
+                     </label>
+                     <div class="element__info">
+                        <div class="element__task-name">
+                           Купити машину
+                        </div>
+                     </div>
+                     <div class="element__settings">
+                        <div class="element__gear">
+                           <a href="form.html" class="icon-settings"></a>
+                        </div>
+                        <div class="element__delete">
+                           <a href="" class="icon-delete"></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="waiting__element element"
+                     data-title="Коли у мене буде вільний час, то я і мої друзі поїдемо в гори" aria-haspopup="true">
+                     <label class="element__checkbox checkbox-2">
+                        <input class="checkbox" type="checkbox">
+                        <span></span>
+                     </label>
+                     <div class="element__info">
+                        <div class="element__task-name">
+                           З'їздити в гори
+                        </div>
+                     </div>
+                     <div class="element__settings">
+                        <div class="element__gear">
+                           <a href="form.html" class="icon-settings"></a>
+                        </div>
+                        <div class="element__delete">
+                           <a href="" class="icon-delete"></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="task__add">
+                     <div class="task__add_inner">
+                        <span class="task__plus"></span>
+                        <span class="task__add-text">Create A New Task</span>
+                     </div>
+                  </div>
+               </form>
+
+            </div>
+
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="container container_footer">
+            <div class="footer__social-wrapper">
+               <div class="footer__social">
+                  <div class="footer__facebook"><a href="#" class="icon-facebook"></a></div>
+                  <div class=" footer__inst"><a href="#" class="icon-inst"> </a> </div>
+                  <div class="footer__youtube"><a href="#" class="icon-youtube"></a></div>
+                  <div class="footer__viber"><a href="#" class="icon-viber"></a></div>
+                  <div class="footer__telegram"><a href="#" class="icon-telega"></a></div>
+               </div>
+            </div>
+            <div class="footer__corp">
+               "Busy Man", 2022. All rights reserved. CREATED BY MAMCHUR AND TYMCHENKO
+            </div>
+         </div>
+      </footer>
+   </div>
+   <script src="./js/theme.js"></script>
+   <script src="./js/burger.js"></script>
+   <script src="./js/sider.js"></script>
+   <script src="./js/line_through.js"></script>
+   <script src="./js/new_task.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+.header {
+   position: fixed;
+   z-index: 9999;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 16px 0;
+   background: var(--color-4);
+   // .header__body
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // .header__logo
+
+   &__logo {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18/16 * 1;
+      text-transform: uppercase;
+      color: var(--menu-font);
+   }
+
+   // .header__burger
+
+   &__burger {
+      display: none;
+   }
+   &__burger.active::before {
+      top: 9px;
+      transform: rotate(45deg);
+   }
+   &__burger.active::after {
+      bottom: 9px;
+      transform: rotate(-45deg);
+   }
+   &__burger.active span {
+      transform: scale(0);
+   }
+   // .header__menu
+
+   &__menu {
+   }
+
+   // .header__list
+
+   &__list {
+      display: flex;
+      li:not(:last-child) {
+         margin-right: 70px;
+      }
+   }
+
+   // .header__link
+
+   &__link {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18/16 * 1;
+      text-transform: uppercase;
+      color: var(--menu-font);
+      opacity: 0.8;
+   }
+   &__link:hover {
+      opacity: 1;
+      transition: color ease 0.2s;
+   }
+}
+@media (max-width: 767.98px) {
+   body.lock {
+      overflow: hidden;
+   }
+   .header__burger {
+      display: block;
+      position: relative;
+      z-index: 3;
+      width: 30px;
+      height: 20px;
+      &::after,
+      &::before {
+         position: absolute;
+         left: 0;
+         transition-duration: 0.3s;
+         width: 100%;
+         height: 2px;
+         content: "";
+         background: var(--burger-color);
+      }
+      &::before {
+         top: 0;
+      }
+      &::after {
+         bottom: 0;
+      }
+      span {
+         position: absolute;
+         top: 9px;
+         left: 0;
+         transition-duration: 0.3s;
+         width: 100%;
+         height: 2px;
+         background: var(--burger-color);
+      }
+   }
+   .header__menu {
+      position: fixed;
+      background: var(--burger-background);
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: -200%;
+      transition: left linear 0.3s;
+      z-index: 100;
+   }
+   .header__menu.active {
+      top: 0;
+      left: 0;
+      overflow: auto;
+   }
+   .header__list {
+      max-width: $maxWidthContainer + px;
+      margin: 0 auto;
+      padding: 0 $paddingContainer + px;
+      display: block;
+      li:not(:last-child) {
+         margin-right: 0px;
+      }
+      li {
+         padding: 20px;
+         text-align: center;
+      }
+   }
+   .header__link {
+      color: var(--menu-font);
+   }
+}
